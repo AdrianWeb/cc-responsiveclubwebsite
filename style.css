@@ -1,0 +1,488 @@
+/* Fonts */
+/*
+font-family: 'Crimson Pro', serif;
+font-family: 'Grandstander', cursive;
+font-family: 'Jost', sans-serif;
+*/
+
+/* {
+  border: 2px solid yellow;
+}*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-size: 100%;
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #3f8efcff, #2667ffff, #3b28ccff);
+}
+
+#header {
+  grid-area: header;
+  background: url('./images/bannercoral.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#left-column {
+  grid-area: left-column;
+}
+#middle-column {
+  grid-area: middle-column;
+}
+#right-column {
+  grid-area: right-column;
+}
+
+#body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content min-content min-content;
+  grid-template-areas:
+    'header'
+    'left-column'
+    'middle-column'
+    'right-column';
+}
+
+/* Header */
+
+#h1background {
+  background: linear-gradient(180deg, #3f8efcff, #2667ffff, #3b28ccff);
+  border: 5px solid #ff0;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#header h1 {
+  font-family: 'Grandstander', cursive;
+  font-size: 5em;
+  /* Gradient text from "https://cssgradient.io/blog/css-gradient-text/" */
+  background: -webkit-linear-gradient(#ff9e00, #ff6d00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#header #motto {
+  margin: 5px;
+  color: #000;
+  background: linear-gradient(180deg, #ff9e00, #ff6d00);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Nav */
+
+/* MOBILE SREEN */
+/* (A) WRAPPER */
+#hamnav {
+  background: rgba(255, 255, 0, 0.9);
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  border-radius: 30px;
+}
+
+/* (A) BREAK INTO VERTICAL MENU */
+#hamitems a {
+  width: 100%;
+  border-radius: 30px;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5em;
+  transition: 0.2s;
+}
+
+#hamitems a:hover {
+  background: #ff6d00;
+  box-shadow: hsla(0, 0%, 0%, 0.8) 5px 5px 20px;
+  transform: scale(1.05);
+  font-weight: bold;
+}
+
+/* (B) SHOW HAMBURGER ICON */
+#hamnav label {
+  display: inline-block;
+  color: white;
+  background: #ff6d00;
+  border: 1px solid white;
+  font-style: normal;
+  font-size: 1em;
+  padding: 10px;
+}
+
+/* (C) TOGGLE SHOW/HIDE MENU */
+#hamitems {
+  display: none;
+  flex-flow: column nowrap;
+}
+
+#hamnav input:checked ~ #hamitems {
+  display: flex;
+}
+
+#hamnav input:checked ~ #hamitems a {
+  width: 95vw;
+}
+
+#hamburger {
+  display: none;
+}
+
+/* Main */
+
+#middle-column {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#middle-column section {
+  margin: 0 auto 20px auto;
+}
+
+#middle-column h2 {
+  text-indent: 50px;
+  margin: 5px auto 20px auto;
+  padding: 10px;
+  background: linear-gradient(180deg, #ff9e00, #ff6d00);
+  width: 100%;
+}
+
+/* Upcoming */
+
+#upcoming {
+  width: 100%;
+}
+
+#upcoming table {
+  margin: 0 auto;
+  background: linear-gradient(180deg, #f2b75a, #f29c5a);
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#upcoming th,
+#upcoming td {
+  padding: 10px 20px;
+}
+
+#upcoming th {
+  text-align: left;
+}
+
+#upcoming td {
+  border-top: 1px solid;
+}
+
+.join {
+  padding: 5px 20px;
+  color: #000;
+  text-decoration: none;
+  background: #ff0;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.join:hover {
+  background: #ff6d00;
+  box-shadow: hsla(0, 0%, 0%, 0.8) 5px 5px 20px;
+  transform: scale(1.05);
+}
+
+/* About */
+
+.section-content {
+  margin: 0 auto;
+  padding: 10px 20px;
+  background: linear-gradient(180deg, #f2b75a, #f29c5a);
+  width: 100%;
+}
+
+#about img {
+  margin: 10px auto;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Gallery */
+
+.gallery-content {
+  padding-bottom: 20px;
+  background: linear-gradient(180deg, #f2b75a, #f29c5a);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Info */
+
+#info .section-content {
+  font-family: 'Crimson Pro', serif;
+}
+
+#info a {
+  color: red;
+}
+
+/* Contact */
+
+#contact form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 90%;
+}
+
+.personal-data,
+.contact-message {
+  margin: 5px;
+}
+
+.personal-data {
+  width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal-data input {
+  width: 100%;
+}
+
+.contact-message {
+  width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal-data label,
+.contact-message label {
+  padding: 5px;
+  background: linear-gradient(180deg, #ff9e00, #ff6d00);
+  width: 100%;
+}
+
+.contact-message textarea {
+  width: 100%;
+  height: 100px;
+}
+
+#submit {
+  width: 100px;
+  height: 100px;
+  font-size: 1.2em;
+  background: #ff0;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+#submit:hover {
+  font-weight: bold;
+  background: #ff6d00;
+  box-shadow: hsla(0, 0%, 0%, 0.8) 5px 5px 20px;
+  transform: scale(1.05);
+}
+
+#right-column {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#footer {
+  margin: 3px;
+  padding: 3px;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 70%;
+}
+
+/* BIG SCREEN */
+@media screen and (min-width: 768px) {
+  #header {
+    padding: 70px;
+  }
+
+  #hamnav {
+    width: 100%;
+    display: block;
+    top: 5px;
+    left: 0;
+    z-index: 10;
+  }
+
+  /* (B) HORIZONTAL MENU ITEMS */
+  #hamitems {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  #hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  /* (C) HIDE HAMBURGER */
+  #hamnav label {
+    display: none;
+  }
+
+  #hamnav input:checked ~ #hamitems a {
+    width: 100%;
+  }
+
+  /* About */
+
+  #about img {
+    width: 50%;
+  }
+
+  /* Gallery */
+
+  .gallery-content {
+    padding: 50px 20%;
+  }
+
+  /* Contact */
+
+  .personal-data {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #body {
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-areas:
+      'left-column header right-column'
+      'left-column middle-column right-column';
+  }
+
+  #hamnav {
+    width: 15%;
+    left: 2%;
+  }
+
+  #hamitems {
+    flex-flow: column nowrap;
+  }
+}

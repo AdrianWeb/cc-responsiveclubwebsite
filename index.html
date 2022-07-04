@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Grandstander:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body">
+    <header id="header">
+      <div id="h1background">
+        <h1>Splash!</h1>
+      </div>
+      <p id="motto">Swimming cap is optional!</p>
+    </header>
+    <aside id="left-column">
+      <!-- From "https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/" -->
+      <!-- (A) MENU WRAPPER -->
+      <nav id="hamnav">
+        <!-- (B) THE HAMBURGER -->
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger" />
+        <!-- (C) MENU ITEMS -->
+        <div id="hamitems">
+          <a href="#upcoming">Upcoming</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#info">Info</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </aside>
+    <main id="middle-column">
+      <section id="upcoming">
+        <h2>Upcoming</h2>
+        <table>
+          <tr>
+            <th>Date</th>
+            <th>Place</th>
+            <th>&nbsp;</th>
+          </tr>
+          <tr>
+            <td>
+              7 Jul <br />
+              2022
+            </td>
+            <td>Gozo Island, Malta</td>
+            <td><a href="#contact" class="join">Join</a></td>
+          </tr>
+          <tr>
+            <td>
+              20 Aug <br />
+              2022
+            </td>
+            <td>Losinj, Croatia</td>
+            <td><a href="#contact" class="join">Join</a></td>
+          </tr>
+          <tr>
+            <td>
+              17 Sep <br />
+              2022
+            </td>
+            <td>Guadeloupe, France</td>
+            <td><a href="#contact" class="join">Join</a></td>
+          </tr>
+          <tr>
+            <td>
+              11 Feb <br />
+              2023
+            </td>
+            <td>Tenerife, Spain</td>
+            <td><a href="#contact" class="join">Join</a></td>
+          </tr>
+          <tr>
+            <td>
+              5 Mar <br />
+              2023
+            </td>
+            <td>Capri, Italy</td>
+            <td><a href="#contact" class="join">Join</a></td>
+          </tr>
+        </table>
+      </section>
+      <section id="about">
+        <h2>About Us</h2>
+        <div class="section-content">
+          <h3>Our history</h3>
+          <p>
+            Curabitur aliquam risus in ipsum condimentum, sit amet tempus risus
+            elementum. Maecenas nec libero eget lectus placerat ullamcorper
+            vitae dapibus arcu. Pellentesque posuere dui a venenatis aliquam.
+            Aenean id eros sed tortor vulputate consectetur non sit amet enim.
+            Suspendisse sit amet augue interdum, congue turpis id, rhoncus quam.
+            Nulla egestas ex ut eros ullamcorper interdum. Duis ornare ante
+            accumsan, rhoncus turpis eget, volutpat nisi. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit. Quisque neque nibh, lacinia in
+            eros ut, hendrerit condimentum tellus. Pellentesque lectus est,
+            tempor id consequat in, mattis ut arcu. Curabitur quis accumsan
+            nunc.
+          </p>
+          <img src="./images/gallery0.jpg" alt="Diving in the Ocean" />
+          <h3>We dive for fun</h3>
+          <p>
+            Duis euismod bibendum neque vitae molestie. Morbi vel est imperdiet,
+            mollis justo sed, sollicitudin elit. Cras faucibus gravida neque,
+            eget varius neque elementum sed. Aliquam erat volutpat. Mauris nisi
+            leo, aliquam in diam in, sodales sodales massa. Duis ut lacinia
+            nunc. Phasellus ultrices odio ut dolor cursus interdum. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Phasellus diam leo,
+            commodo sed placerat ut, dapibus sed dolor. Aenean ultrices risus ac
+            luctus mattis. Aliquam erat volutpat.
+          </p>
+        </div>
+      </section>
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-content">
+          <!-- From "https://www.w3schools.com/howto/howto_js_slideshow.asp" -->
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="./images/gallery1.jpg" style="width: 100%" />
+              <div class="text">Bikini Bottom</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="./images/gallery2.jpg" style="width: 100%" />
+              <div class="text">Mariana Trench</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="./images/gallery3.jpg" style="width: 100%" />
+              <div class="text">Tarawa Atoll, 1943 (Colorized)</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br />
+
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </section>
+      <section id="info">
+        <h2>Info</h2>
+        <div class="section-content">
+          <h3>Rules and Policies</h3>
+          <p>
+            <a href="#">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              nec quam non justo tempus tristique quis eget nunc. Morbi ut
+              viverra enim, quis iaculis ex. Maecenas et vehicula nulla. Fusce
+              eu quam neque. In blandit enim mauris, id fermentum enim fermentum
+              ac. Maecenas consectetur sodales libero in lobortis. Vivamus vel
+              magna quis mauris faucibus convallis. Etiam in scelerisque erat,
+              vel pulvinar sem.
+              <br />
+              <span>Click here!</span>
+            </a>
+          </p>
+          <h3>Important!</h3>
+          <p>
+            Morbi eu lorem cursus est pulvinar aliquet sed quis tortor. Duis
+            ornare ultrices nunc sed ultrices. Fusce non nibh vehicula, eleifend
+            mauris vel, feugiat massa. Nullam sagittis id nulla non sodales. Nam
+            enim arcu, consectetur eu eros vel, viverra finibus felis. Quisque
+            posuere diam vitae ligula feugiat rutrum. Donec cursus odio vitae
+            suscipit dictum. Praesent ut fermentum velit. Nulla porttitor
+            aliquet sagittis. Phasellus arcu eros, accumsan sit amet diam a,
+            vulputate tincidunt leo. Pellentesque commodo erat vitae tellus
+            semper interdum. Etiam tempus felis a posuere luctus. Praesent
+            lacinia ligula eu dapibus condimentum. In euismod, ex at scelerisque
+            gravida, ex arcu dictum nisl, quis laoreet enim nisl sit amet ante.
+            Integer id turpis varius, maximus leo sit amet, dictum dolor. Donec
+            facilisis vehicula odio, vel bibendum odio pellentesque ac.
+          </p>
+          <h3>Disclaimer</h3>
+          <p>
+            In tempor arcu sit amet rutrum venenatis. Mauris molestie metus
+            eros, ullamcorper feugiat mi sodales molestie. Integer nulla turpis,
+            mattis ut velit non, finibus ornare enim. Integer accumsan cursus
+            tellus, nec hendrerit leo faucibus luctus. Pellentesque quam magna,
+            hendrerit eu massa ac, faucibus vulputate lectus.
+          </p>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contuct Us</h2>
+        <form>
+          <div class="personal-data">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" />
+          </div>
+          <div class="personal-data">
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" />
+          </div>
+          <div class="personal-data">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="personal-data">
+            <label for="phone">Phone:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$
+              "
+            />
+          </div>
+          <div class="contact-message">
+            <label for="message">Message:</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+          <input id="submit" type="submit" value="Submit" />
+        </form>
+      </section>
+    </main>
+    <aside id="right-column">
+      <p id="footer">
+        &#169; AdrianWeb <br />
+        Images by Unsplash
+      </p>
+    </aside>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName('mySlides');
+        let dots = document.getElementsByClassName('dot');
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = 'none';
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(' active', '');
+        }
+        slides[slideIndex - 1].style.display = 'block';
+        dots[slideIndex - 1].className += ' active';
+      }
+    </script>
+  </body>
+</html>
